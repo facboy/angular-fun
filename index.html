@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularFun">
+<head>
+    <meta charset="utf-8" />
+    <base href="/">
+    <title>AngularJS fun</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link rel="stylesheet" href="static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="static/css/mine.css">
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">whee</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#">fun</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li>
+                        <form class="navbar-search" data-ng-controller="NavSearchHttpCtrl">
+                            <label for="httpSearch">$http (world):
+                                <input id="httpSearch" type="text"
+                                       class="search-query" placeholder="city"
+                                       data-ng-model="selected"
+                                       data-typeahead="result for result in findCities($viewValue)"
+                                       data-typeahead-min-length="3">
+                            </label>
+                        </form>
+                    </li>
+                    <li>
+                        <form class="navbar-search" data-ng-controller="NavSearchResourceCtrl">
+                            <label for="resourceSearch">$resource (us):
+                                <input id="resourceSearch" type="text" class="search-query" placeholder="city"
+                                       data-ng-model="selected"
+                                       data-typeahead="result for result in findCities($viewValue)"
+                                       data-typeahead-min-length="3">
+                            </label>
+                        </form>
+                    </li>
+                    <li><a href="#">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+
+                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <!-- Everything you want hidden at 940px or less, place within here -->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="fun1">fun 1</a></li>
+                        <li><a href="fun2">fun 2</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div ng-view />
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.js"></script>
+<script src="static/js/ui-bootstrap-tpls-0.2.0.js"></script>
+<script src="static/js/app.js"></script>
+<script src="static/js/resource-fun.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="static/js/highchart.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "name": "angular-fun",
+    "preferGlobal": true,
+    "version": "0.1.0",
+    "author": "Christopher Ng <facboy@gmail.com>",
+    "description": "a simple zero-configuration command-line http server",
+    "contributors": [
+        {
+            "name": "Christopher Ng",
+            "email": "facboy@gmail.com.com"
+        }
+    ],
+    "scripts": {
+        "start": "node ./whee-server.js",
+        "test": "vows --spec --isolate",
+        "predeploy": "echo This will be run before deploying the app",
+        "postdeploy": "echo This will be run after deploying the app"
+    },
+    "// main": "./lib/whee-server",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/facboy/angular-fun.git"
+    },
+    "keywords": [
+        "cli",
+        "http",
+        "server"
+    ],
+    "dependencies" : {
+        "express"  :  ">=3.2.x",
+        "underscore" : ">=1.4.4"
+    },
+    "analyze": false,
+    "// devDependencies": {
+        "vows"    :  "0.5.x",
+        "request" :  "2.1.x"
+    },
+    "// bundledDependencies": [
+        "union",
+        "ecstatic"
+    ],
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.6"
+    }
+}
